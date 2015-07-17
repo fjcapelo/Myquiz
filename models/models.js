@@ -46,7 +46,7 @@ sequelize.sync().success(function() {
                                 });
                                 Quiz.create ({ pregunta: 'Capital de Francia',
                                                respuesta: 'Paris'
-                                             }):
+                                             });
                    .then (function(){console.log('Base de datos inicializada')});
       };
     });
