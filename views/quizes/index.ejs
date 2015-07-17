@@ -1,6 +1,8 @@
 
-<h3>Créditos:</h3>
-<p>Autor principal: Juan Quemada</p>
-<p><img src="/images/escudo.jpg" width="100" /></p>
-<p>Colaborador: Francisco J.Capelo </p>
-<p><img src="/images/imagen1.png" width="100" /></p>
+// Mostrar frases que hay en base de datos
+<table>
+<% var=i; for (i=0; i < quizes.length; i++){ %>
+<tr><td><a href="quizes/<%= quizes[i].id %>">"<%= quizes[i].pregunta %></a></td></tr>
+<% } %>
+
+</table>
