@@ -33,9 +33,3 @@ resultado='Correcto';
 }
 res.render('quizes/answer',{quiz: req.quiz, respuesta: resultado});
 };
-exports.search=function(req,res){
-var quiz=models.Quiz.build(
-{pregunta: "pregunta",respuesta: "respuesta"}
-);
-res.render('quizes/new.ejs',{quiz: quiz});
-};
