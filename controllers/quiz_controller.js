@@ -13,15 +13,19 @@ next(new Error("No existe quizID=" + quizId));
 next(error);
 });
 };
-exports.index=function(req,res){
+exports.respuesta=function(req,res){
 filtro={};
 if(typeof req.query.search!=="undefined"){
 busca="%"+req.query.search.replace(/\s/gi,'%')+"%";
 filtro={where: ["pregunta like ?",busca]};
 }
 models.Quiz.findAll(filtro).then(function(quizes){
-res.render('quizes/index.ejs',{quizes:quizes});
+res.render('quizes/respuesta.ejs',{quizes:quizes});
 })
+
+};
+exports.index=function(req,res){
+res.render('quizes/index');
 };
 exports.show=function(req,res){
 res.render('quizes/show',{quiz: req.quiz});
