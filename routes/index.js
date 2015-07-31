@@ -14,9 +14,9 @@ router.get('/quizes/respuesta', quizController.respuesta);
 router.get('/quizes/:quizId(\\d+)', quizController.show);
 router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);
 router.post('/quizes/create', quizController.create);
-router.get('/quizes/:quizId(\\d+)/edit', quizController.edit);
-router.put('/quizes/:quizId(\\d+)', quizController.update);
-router.delete('/quizes/:quizId(\\d+)', quizController.destroy);
+//router.get('/quizes/:quizId(\\d+)/edit', quizController.edit);
+//router.put('/quizes/:quizId(\\d+)', quizController.update);
+//router.delete('/quizes/:quizId(\\d+)', quizController.destroy);
 //Creditos
 router.get('/author/creditos', function(req, res) {
 res.render ('author/creditos', {});
