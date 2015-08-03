@@ -1,4 +1,5 @@
 var models=require('../models/models.js');
+// Autoload - factoriza el código si ruta incluye :quizId
 exports.load=function(req,res,next,quizId){
 models.Quiz.find(quizId).then(
 function(quiz){
@@ -6,48 +7,102 @@ if(quiz){
 req.quiz=quiz;
 next();
 }else{
-next(new Error("No existe quizID=" + quizId));
+next(new Error('NO existe quizId='+quizId));
 }
 }
-).catch(function(error){
-next(error);
-});
+).catch(function(error){ next(error);})
 };
-exports.respuesta=function(req,res){
-filtro={};
-if(typeof req.query.search!=="undefined"){
-busca="%"+req.query.search.replace(/\s/gi,'%')+"%";
-filtro={where: ["pregunta like ?",busca]};
-}
-models.Quiz.findAll(filtro).then(function(quizes){
-res.render('quizes/respuesta.ejs',{quizes:quizes});
-})
-};
+//GET /quiezes
 exports.index=function(req,res){
-res.render('quizes/index');
-};
-exports.show=function(req,res){
-res.render('quizes/show',{quiz: req.quiz});
-};
-exports.answer=function(req,res){
-var resultado='Incorrecto';
-if(req.query.respuesta===req.quiz.respuesta){
-resultado='Correcto';
+var search=req.query.search;
+if(search){
+var texto_a_buscar=(search || '').replace(" ","%");
+console.log(texto_a_buscar);
+models.Quiz.findAll({where:["pregunta like ? ",'%'+texto_a_buscar+'%'],
+order:'pregunta ASC'}).then(
+function(quizes){
+res.render('quizes/index.ejs',{quizes:quizes,errors:[]});
 }
-res.render('quizes/answer',{quiz: req.quiz, respuesta: resultado});
+).catch(function(error){next(error);})
+}else{
+models.Quiz.findAll().then(
+function(quizes){
+res.render('quizes/index.ejs',{quizes:quizes,errors:[]});
+}
+).catch(function(error){next(error);})
+}
 };
-// GET /quizes/new
-exports.new = function(req, res) {
-var quiz = models.Quiz.build(
-{pregunta: "Pregunta", respuesta: "Respuesta"}
+// GET /quizes/:id
+exports.show=function(req,res){
+res.render('quizes/show',{quiz:req.quiz,errors:[]});
+};
+// GET /quizes/:id/answer
+exports.answer=function(req,res){
+var resultado = 'Incorrecto';
+if(req.query.respuesta === req.quiz.respuesta){
+resultado='Correcto'
+}
+res.render('quizes/answer',
+{quiz:req.quiz, respuesta:resultado,errors:[]});
+};
+//GET /quizes/new
+exports.new=function(req,res){
+var quiz=models.Quiz.build( //crea objeto quiz
+{pregunta:"Pregunta",respuesta:"Respuesta"}
 );
-res.render('quizes/new', {quiz: quiz, errors: []});
+res.render('quizes/new',{quiz:quiz,errors:[]});
 };
 // POST /quizes/create
-exports.create = function(req, res) {
-var quiz = models.Quiz.build( req.body.quiz );
-// guarda en DB los campos pregunta y respuesta de quiz
-quiz.save({fields: ["pregunta","respuesta"]}).then (function(){
-  res.redirect('/quizes');
-})  // Redireccion HTTP (URL relativo) lista de preguntas
+exports.create=function(req,res){
+var quiz=models.Quiz.build(req.body.quiz);
+var errors=quiz.validate();
+if(errors){
+var i=0;
+var errores=new Array();
+//se convierte en [] con la propiedad message por compatibilida con layout
+for(var prop in errors){
+errores[i++]={message:errors[prop]};
+}
+res.render('quizes/new',{quiz:quiz,errors:errores});
+}else{
+// guarda en la DB los campos pregunta y respuesta de quiz
+quiz.save({fields:["pregunta","respuesta","tema"]}).then(function(){
+res.redirect('/quizes');
+// res.reditect :Redireccioin HTTP a lista de preguntas
+})
+}
+};
+//GET /quizes/:id/edit
+exports.edit=function(req,res){
+var quiz=req.quiz; //autoload de instancia de quiz
+res.render('quizes/edit',{quiz:quiz,errors:[]});
+};
+// PUT /quizes/:id
+exports.update=function(req,res){
+req.quiz.pregunta=req.body.quiz.pregunta;
+req.quiz.respuesta=req.body.quiz.respuesta;
+req.quiz.tema=req.body.quiz.tema;
+var errors=req.quiz.validate();
+if(errors){
+var i=0;
+var errores=new Array();
+//se convierte en [] con la propiedad message por compatibilida con layout
+for(var prop in errors){
+errores[i++]={message:errors[prop]};
+}
+res.render('quizes/edit',{quiz:req.quiz,errors:errores});
+}else{
+// guarda en la DB los campos pregunta y respuesta de quiz
+req.quiz.save({fields:["pregunta","respuesta","tema"]}).then(function(){
+res.redirect('/quizes');
+// res.reditect :Redireccioin HTTP a lista de preguntas(url realtivo)
+})
+}
+};
+exports.destroy=function(req,res){
+req.quiz.destroy().then(function(){
+res.redirect('/quizes');
+}).catch(function(error){
+next(error);
+});
 };
