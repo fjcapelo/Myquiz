@@ -1,25 +1,320 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node',
-1 verbose cli   '/usr/bin/npm',
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
-1 verbose cli   '--save',
-1 verbose cli   'sequelize@2.0.0' ]
-2 info using npm@1.4.28
-3 info using node@v0.10.38
-4 verbose node symlink /usr/bin/node
-5 error Failed to parse json
-5 error Unexpected token }
-6 error File: /home/frank/proyecto_quiz/myquiz/package.json
-7 error Failed to parse package.json data.
-7 error package.json must be actual JSON, not just JavaScript.
-7 error
-7 error This is not a bug in npm.
-7 error Tell the package author to fix their package.json file. JSON.parse
-8 error System Linux 3.13.0-32-generic
-9 error command "/usr/bin/node" "/usr/bin/npm" "install" "--save" "sequelize@2.0.0"
-10 error cwd /home/frank/proyecto_quiz/myquiz
-11 error node -v v0.10.38
-12 error npm -v 1.4.28
-13 error file /home/frank/proyecto_quiz/myquiz/package.json
-14 error code EJSONPARSE
-15 verbose exit [ 1, true ]
+1 verbose cli   '',
+1 verbose cli   '--dev' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.4
+4 verbose read json /home/frank/proyecto_quiz/myquiz/package.json
+5 warn package.json myquiz@0.0.0 No README.md file found!
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/frank/proyecto_quiz/myquiz',
+7 verbose install   [ 'body-parser',
+7 verbose install     'cookie-parser',
+7 verbose install     'debug',
+7 verbose install     'ejs',
+7 verbose install     'express',
+7 verbose install     'express-partials',
+7 verbose install     'method-override',
+7 verbose install     'morgan',
+7 verbose install     'pg',
+7 verbose install     'pg-hstore',
+7 verbose install     'sequelize',
+7 verbose install     'serve-favicon',
+7 verbose install     'sqlite3' ] ]
+8 verbose from cache /home/frank/proyecto_quiz/myquiz/package.json
+9 info preinstall myquiz@0.0.0
+10 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/body-parser/package.json
+11 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/cookie-parser/package.json
+12 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/debug/package.json
+13 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/ejs/package.json
+14 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/express/package.json
+15 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/express-partials/package.json
+16 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/method-override/package.json
+17 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/morgan/package.json
+18 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/pg/package.json
+19 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/pg-hstore/package.json
+20 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/sequelize/package.json
+21 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/serve-favicon/package.json
+22 verbose read json /home/frank/proyecto_quiz/myquiz/node_modules/sqlite3/package.json
+23 verbose from cache /home/frank/proyecto_quiz/myquiz/package.json
+24 verbose readDependencies using package.json deps
+25 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/body-parser/package.json
+26 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/cookie-parser/package.json
+27 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/debug/package.json
+28 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/ejs/package.json
+29 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/express/package.json
+30 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/express-partials/package.json
+31 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/method-override/package.json
+32 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/morgan/package.json
+33 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/pg/package.json
+34 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/pg-hstore/package.json
+35 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/sequelize/package.json
+36 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/serve-favicon/package.json
+37 verbose from cache /home/frank/proyecto_quiz/myquiz/node_modules/sqlite3/package.json
+38 verbose already installed skipping debug@~2.0.0 /home/frank/proyecto_quiz/myquiz
+39 verbose already installed skipping body-parser@~1.8.1 /home/frank/proyecto_quiz/myquiz
+40 verbose already installed skipping cookie-parser@~1.3.3 /home/frank/proyecto_quiz/myquiz
+41 verbose already installed skipping ejs@~0.8.5 /home/frank/proyecto_quiz/myquiz
+42 verbose already installed skipping express@~4.9.0 /home/frank/proyecto_quiz/myquiz
+43 verbose cache add [ 'express-partials@^0.3.0', null ]
+44 verbose cache add name=undefined spec="express-partials@^0.3.0" args=["express-partials@^0.3.0",null]
+45 verbose parsed url { protocol: null,
+45 verbose parsed url   slashes: null,
+45 verbose parsed url   auth: null,
+45 verbose parsed url   host: null,
+45 verbose parsed url   port: null,
+45 verbose parsed url   hostname: null,
+45 verbose parsed url   hash: null,
+45 verbose parsed url   search: null,
+45 verbose parsed url   query: null,
+45 verbose parsed url   pathname: 'express-partials@^0.3.0',
+45 verbose parsed url   path: 'express-partials@^0.3.0',
+45 verbose parsed url   href: 'express-partials@^0.3.0' }
+46 verbose cache add name="express-partials" spec="^0.3.0" args=["express-partials","^0.3.0"]
+47 verbose parsed url { protocol: null,
+47 verbose parsed url   slashes: null,
+47 verbose parsed url   auth: null,
+47 verbose parsed url   host: null,
+47 verbose parsed url   port: null,
+47 verbose parsed url   hostname: null,
+47 verbose parsed url   hash: null,
+47 verbose parsed url   search: null,
+47 verbose parsed url   query: null,
+47 verbose parsed url   pathname: '^0.3.0',
+47 verbose parsed url   path: '^0.3.0',
+47 verbose parsed url   href: '^0.3.0' }
+48 verbose addNamed [ 'express-partials', '^0.3.0' ]
+49 verbose addNamed [ null, null ]
+50 verbose cache add [ 'method-override@^2.3.1', null ]
+51 verbose cache add name=undefined spec="method-override@^2.3.1" args=["method-override@^2.3.1",null]
+52 verbose parsed url { protocol: null,
+52 verbose parsed url   slashes: null,
+52 verbose parsed url   auth: null,
+52 verbose parsed url   host: null,
+52 verbose parsed url   port: null,
+52 verbose parsed url   hostname: null,
+52 verbose parsed url   hash: null,
+52 verbose parsed url   search: null,
+52 verbose parsed url   query: null,
+52 verbose parsed url   pathname: 'method-override@^2.3.1',
+52 verbose parsed url   path: 'method-override@^2.3.1',
+52 verbose parsed url   href: 'method-override@^2.3.1' }
+53 verbose cache add name="method-override" spec="^2.3.1" args=["method-override","^2.3.1"]
+54 verbose parsed url { protocol: null,
+54 verbose parsed url   slashes: null,
+54 verbose parsed url   auth: null,
+54 verbose parsed url   host: null,
+54 verbose parsed url   port: null,
+54 verbose parsed url   hostname: null,
+54 verbose parsed url   hash: null,
+54 verbose parsed url   search: null,
+54 verbose parsed url   query: null,
+54 verbose parsed url   pathname: '^2.3.1',
+54 verbose parsed url   path: '^2.3.1',
+54 verbose parsed url   href: '^2.3.1' }
+55 verbose addNamed [ 'method-override', '^2.3.1' ]
+56 verbose addNamed [ null, null ]
+57 verbose already installed skipping morgan@~1.3.0 /home/frank/proyecto_quiz/myquiz
+58 verbose cache add [ 'pg@^4.1.1', null ]
+59 verbose cache add name=undefined spec="pg@^4.1.1" args=["pg@^4.1.1",null]
+60 verbose parsed url { protocol: null,
+60 verbose parsed url   slashes: null,
+60 verbose parsed url   auth: null,
+60 verbose parsed url   host: null,
+60 verbose parsed url   port: null,
+60 verbose parsed url   hostname: null,
+60 verbose parsed url   hash: null,
+60 verbose parsed url   search: null,
+60 verbose parsed url   query: null,
+60 verbose parsed url   pathname: 'pg@^4.1.1',
+60 verbose parsed url   path: 'pg@^4.1.1',
+60 verbose parsed url   href: 'pg@^4.1.1' }
+61 verbose cache add name="pg" spec="^4.1.1" args=["pg","^4.1.1"]
+62 verbose parsed url { protocol: null,
+62 verbose parsed url   slashes: null,
+62 verbose parsed url   auth: null,
+62 verbose parsed url   host: null,
+62 verbose parsed url   port: null,
+62 verbose parsed url   hostname: null,
+62 verbose parsed url   hash: null,
+62 verbose parsed url   search: null,
+62 verbose parsed url   query: null,
+62 verbose parsed url   pathname: '^4.1.1',
+62 verbose parsed url   path: '^4.1.1',
+62 verbose parsed url   href: '^4.1.1' }
+63 verbose addNamed [ 'pg', '^4.1.1' ]
+64 verbose addNamed [ null, null ]
+65 verbose cache add [ 'pg-hstore@^2.3.2', null ]
+66 verbose cache add name=undefined spec="pg-hstore@^2.3.2" args=["pg-hstore@^2.3.2",null]
+67 verbose parsed url { protocol: null,
+67 verbose parsed url   slashes: null,
+67 verbose parsed url   auth: null,
+67 verbose parsed url   host: null,
+67 verbose parsed url   port: null,
+67 verbose parsed url   hostname: null,
+67 verbose parsed url   hash: null,
+67 verbose parsed url   search: null,
+67 verbose parsed url   query: null,
+67 verbose parsed url   pathname: 'pg-hstore@^2.3.2',
+67 verbose parsed url   path: 'pg-hstore@^2.3.2',
+67 verbose parsed url   href: 'pg-hstore@^2.3.2' }
+68 verbose cache add name="pg-hstore" spec="^2.3.2" args=["pg-hstore","^2.3.2"]
+69 verbose parsed url { protocol: null,
+69 verbose parsed url   slashes: null,
+69 verbose parsed url   auth: null,
+69 verbose parsed url   host: null,
+69 verbose parsed url   port: null,
+69 verbose parsed url   hostname: null,
+69 verbose parsed url   hash: null,
+69 verbose parsed url   search: null,
+69 verbose parsed url   query: null,
+69 verbose parsed url   pathname: '^2.3.2',
+69 verbose parsed url   path: '^2.3.2',
+69 verbose parsed url   href: '^2.3.2' }
+70 verbose addNamed [ 'pg-hstore', '^2.3.2' ]
+71 verbose addNamed [ null, null ]
+72 verbose cache add [ 'sequelize@^2.0.0', null ]
+73 verbose cache add name=undefined spec="sequelize@^2.0.0" args=["sequelize@^2.0.0",null]
+74 verbose parsed url { protocol: null,
+74 verbose parsed url   slashes: null,
+74 verbose parsed url   auth: null,
+74 verbose parsed url   host: null,
+74 verbose parsed url   port: null,
+74 verbose parsed url   hostname: null,
+74 verbose parsed url   hash: null,
+74 verbose parsed url   search: null,
+74 verbose parsed url   query: null,
+74 verbose parsed url   pathname: 'sequelize@^2.0.0',
+74 verbose parsed url   path: 'sequelize@^2.0.0',
+74 verbose parsed url   href: 'sequelize@^2.0.0' }
+75 verbose cache add name="sequelize" spec="^2.0.0" args=["sequelize","^2.0.0"]
+76 verbose parsed url { protocol: null,
+76 verbose parsed url   slashes: null,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: null,
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: null,
+76 verbose parsed url   hash: null,
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: '^2.0.0',
+76 verbose parsed url   path: '^2.0.0',
+76 verbose parsed url   href: '^2.0.0' }
+77 verbose addNamed [ 'sequelize', '^2.0.0' ]
+78 verbose addNamed [ null, null ]
+79 silly lockFile b9c91d61-express-partials-0-3-0 express-partials@^0.3.0
+80 verbose lock express-partials@^0.3.0 /home/frank/.npm/b9c91d61-express-partials-0-3-0.lock
+81 silly lockFile f195831d-method-override-2-3-1 method-override@^2.3.1
+82 verbose lock method-override@^2.3.1 /home/frank/.npm/f195831d-method-override-2-3-1.lock
+83 verbose already installed skipping serve-favicon@~2.1.3 /home/frank/proyecto_quiz/myquiz
+84 verbose cache add [ 'sqlite3@^3.0.4', null ]
+85 verbose cache add name=undefined spec="sqlite3@^3.0.4" args=["sqlite3@^3.0.4",null]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: 'sqlite3@^3.0.4',
+86 verbose parsed url   path: 'sqlite3@^3.0.4',
+86 verbose parsed url   href: 'sqlite3@^3.0.4' }
+87 verbose cache add name="sqlite3" spec="^3.0.4" args=["sqlite3","^3.0.4"]
+88 verbose parsed url { protocol: null,
+88 verbose parsed url   slashes: null,
+88 verbose parsed url   auth: null,
+88 verbose parsed url   host: null,
+88 verbose parsed url   port: null,
+88 verbose parsed url   hostname: null,
+88 verbose parsed url   hash: null,
+88 verbose parsed url   search: null,
+88 verbose parsed url   query: null,
+88 verbose parsed url   pathname: '^3.0.4',
+88 verbose parsed url   path: '^3.0.4',
+88 verbose parsed url   href: '^3.0.4' }
+89 verbose addNamed [ 'sqlite3', '^3.0.4' ]
+90 verbose addNamed [ null, null ]
+91 silly lockFile a15b9347-sqlite3-3-0-4 sqlite3@^3.0.4
+92 verbose lock sqlite3@^3.0.4 /home/frank/.npm/a15b9347-sqlite3-3-0-4.lock
+93 silly lockFile ab8e0520-pg-4-1-1 pg@^4.1.1
+94 verbose lock pg@^4.1.1 /home/frank/.npm/ab8e0520-pg-4-1-1.lock
+95 silly lockFile a2a7f11c-pg-hstore-2-3-2 pg-hstore@^2.3.2
+96 verbose lock pg-hstore@^2.3.2 /home/frank/.npm/a2a7f11c-pg-hstore-2-3-2.lock
+97 silly lockFile 7e315cdc-sequelize-2-0-0 sequelize@^2.0.0
+98 verbose lock sequelize@^2.0.0 /home/frank/.npm/7e315cdc-sequelize-2-0-0.lock
+99 info addNameTag [ 'express-partials', '^0.3.0' ]
+100 info addNameTag [ 'method-override', '^2.3.1' ]
+101 info addNameTag [ 'pg-hstore', '^2.3.2' ]
+102 info addNameTag [ 'sequelize', '^2.0.0' ]
+103 info addNameTag [ 'sqlite3', '^3.0.4' ]
+104 info addNameTag [ 'pg', '^4.1.1' ]
+105 verbose url raw express-partials
+106 verbose url resolving [ 'https://registry.npmjs.org/', './express-partials' ]
+107 verbose url resolved https://registry.npmjs.org/express-partials
+108 info trying registry request attempt 1 at 08:17:30
+109 http GET https://registry.npmjs.org/express-partials
+110 verbose url raw method-override
+111 verbose url resolving [ 'https://registry.npmjs.org/', './method-override' ]
+112 verbose url resolved https://registry.npmjs.org/method-override
+113 info trying registry request attempt 1 at 08:17:30
+114 http GET https://registry.npmjs.org/method-override
+115 verbose url raw pg-hstore
+116 verbose url resolving [ 'https://registry.npmjs.org/', './pg-hstore' ]
+117 verbose url resolved https://registry.npmjs.org/pg-hstore
+118 info trying registry request attempt 1 at 08:17:30
+119 http GET https://registry.npmjs.org/pg-hstore
+120 verbose url raw sequelize
+121 verbose url resolving [ 'https://registry.npmjs.org/', './sequelize' ]
+122 verbose url resolved https://registry.npmjs.org/sequelize
+123 info trying registry request attempt 1 at 08:17:30
+124 http GET https://registry.npmjs.org/sequelize
+125 verbose url raw sqlite3
+126 verbose url resolving [ 'https://registry.npmjs.org/', './sqlite3' ]
+127 verbose url resolved https://registry.npmjs.org/sqlite3
+128 info trying registry request attempt 1 at 08:17:31
+129 http GET https://registry.npmjs.org/sqlite3
+130 verbose url raw pg
+131 verbose url resolving [ 'https://registry.npmjs.org/', './pg' ]
+132 verbose url resolved https://registry.npmjs.org/pg
+133 info trying registry request attempt 1 at 08:17:31
+134 http GET https://registry.npmjs.org/pg
+135 http 200 https://registry.npmjs.org/pg-hstore
+136 silly registry.get cb [ 200,
+136 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+136 silly registry.get     etag: '"1ED3GMNBCS8PAWYO3TZPXNHHX"',
+136 silly registry.get     'content-type': 'application/json',
+136 silly registry.get     'cache-control': 'max-age=60',
+136 silly registry.get     'content-length': '16631',
+136 silly registry.get     'accept-ranges': 'bytes',
+136 silly registry.get     date: 'Tue, 04 Aug 2015 06:17:31 GMT',
+136 silly registry.get     via: '1.1 varnish',
+136 silly registry.get     age: '0',
+136 silly registry.get     connection: 'keep-alive',
+136 silly registry.get     'x-served-by': 'cache-ams4126-AMS',
+136 silly registry.get     'x-cache': 'HIT',
+136 silly registry.get     'x-cache-hits': '1',
+136 silly registry.get     'x-timer': 'S1438669051.432993,VS0,VE93',
+136 silly registry.get     vary: 'Accept' } ]
+137 silly lockFile a2a7f11c-pg-hstore-2-3-2 pg-hstore@^2.3.2
+138 silly lockFile a2a7f11c-pg-hstore-2-3-2 pg-hstore@^2.3.2
+139 error Error: No compatible version found: pg-hstore@'^2.3.2'
+139 error Valid install targets:
+139 error ["1.0.0","1.0.1","1.0.2","1.0.3","1.0.4","1.1.0","2.0.0","2.1.0","2.1.1","2.1.2","2.2.0","2.3.0","2.3.1","2.3.2"]
+139 error     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:685:10)
+139 error     at /usr/local/lib/node_modules/npm/lib/cache.js:607:10
+139 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+139 error     at Object.oncomplete (fs.js:107:15)
+140 error If you need help, you may report this log at:
+140 error     <http://github.com/isaacs/npm/issues>
+140 error or email it to:
+140 error     <npm-@googlegroups.com>
+141 error System Linux 3.13.0-32-generic
+142 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "" "--dev"
+143 error cwd /home/frank/proyecto_quiz/myquiz
+144 error node -v v0.10.4
+145 error npm -v 1.2.18
+146 verbose exit [ 1, true ]
