@@ -92,3 +92,7 @@ res.redirect('/quizes');
 next(error);
 });
 };
+// GET /author
+exports.author = function(req, res) {
+res.render('author/creditos', {errors: []});
+};
